@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.dist/
+
+# Virtual Environment
+venv/
+.venv/
+
+.project
+.pydevproject
+.settings/
+
+# macOS
+.DS_Store
