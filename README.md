@@ -1,97 +1,72 @@
-# E-Commerce Backend API
+<div align="center">
+  <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" width="400"/>
+  
+  # E-Commerce Backend API
+  
+  ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+  ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+  
+  RESTful API for product inventory and shopping cart management
+  
+</div>
 
-High-performance RESTful API for product inventory and shopping cart management built with FastAPI.
+---
 
-## Features
+##  Features
 
-- **Product Management**: Browse product catalog with real-time stock information
-- **Shopping Cart**: Add, update, and remove items from cart
-- **Checkout**: Process orders with automatic stock deduction
-- **Input Validation**: Comprehensive request validation using Pydantic
-- **Error Handling**: Detailed error responses for better debugging
+-  Product catalog with real-time stock tracking
+-  Shopping cart management (add, update, remove)
+-  Checkout processing with automatic inventory updates
+-  Input validation with Pydantic
+-  High-performance async endpoints
 
-## Tech Stack
+##  Tech Stack
 
-- **FastAPI**: Modern, fast web framework for building APIs
-- **Pydantic**: Data validation and settings management
-- **Uvicorn**: Lightning-fast ASGI server
+**FastAPI** · **Python 3.x** · **Pydantic** · **Uvicorn**
 
-## Installation
-
-1. Clone the repository:
+##  Quick Start
 
 ```bash
+# Clone and navigate
 git clone <repository-url>
 cd ecommerce-backend
-```
 
-2. Create and activate virtual environment:
-
-```bash
+# Setup virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-3. Install dependencies:
-
-```bash
+# Install dependencies
 pip install -r requirements.text
-```
 
-## Running the Application
-
-Start the development server:
-
-```bash
+# Run server
 uvicorn main:app --reload
 ```
 
-The API will be available at `http://localhost:8000`
+**API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs) · [ReDoc](http://localhost:8000/redoc)
 
-## API Documentation
+##  API Endpoints
 
-Once the server is running, access:
+| Method   | Endpoint           | Description          |
+| -------- | ------------------ | -------------------- |
+| `GET`    | `/api/products`    | List all products    |
+| `POST`   | `/api/cart/add`    | Add item to cart     |
+| `PUT`    | `/api/cart/update` | Update cart quantity |
+| `GET`    | `/api/cart`        | View cart            |
+| `DELETE` | `/api/cart/clear`  | Clear cart           |
+| `POST`   | `/api/checkout`    | Process order        |
 
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-
-## API Endpoints
-
-### Products
-
-- `GET /api/products` - Get all products with ID, name, price, and stock
-
-### Cart
-
-- `POST /api/cart/add` - Add item to cart
-- `PUT /api/cart/update` - Update cart item quantity
-- `GET /api/cart` - View current cart
-- `DELETE /api/cart/clear` - Clear entire cart
-
-### Checkout
-
-- `POST /api/checkout` - Process checkout and create order
-
-## Project Structure
+##  Project Structure
 
 ```
-ecommerce-backend/
-├── main.py           # FastAPI application and route handlers
-├── models.py         # Pydantic models for requests/responses
-├── services.py       # Business logic and data operations
-├── requirements.text # Python dependencies
-└── README.md         # Project documentation
+├── main.py           # FastAPI app & routes
+├── models.py         # Pydantic models
+├── services.py       # Business logic
+└── requirements.text # Dependencies
 ```
 
-## Development
+---
 
-This project uses:
-
-- Python 3.x
-- FastAPI for API framework
-- Uvicorn as ASGI server
-- Pydantic for data validation
-
-## License
-
-MIT
+<div align="center">
+  Built with ❤️ using FastAPI
+</div>
